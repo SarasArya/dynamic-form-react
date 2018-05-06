@@ -12,6 +12,8 @@ const TextQuestion = props => {
     <Fragment>
       {/*  */}
       <h2>{props.question.prompt}</h2>
+      <h4>Is this required : {props.question.is_required.toString()}</h4>
+      <h4>Min Character Length : {props.question.min_char_length}</h4>
       <textarea
         type="text"
         value={props.answer}

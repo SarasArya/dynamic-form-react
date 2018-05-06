@@ -36,3 +36,13 @@
   background-color: #008cba;
   color: #ffff;
 }
+
+.ke-form__form-renderer__in-active-button-content {
+  min-width: 13em;
+  min-height: 4em;
+  border-radius: 5em;
+  padding: 0.8em;
+  cursor: pointer;
+  background-color: gray;
+  color: #ffff;
+}

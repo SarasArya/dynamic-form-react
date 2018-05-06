@@ -55,7 +55,11 @@ class FormRenderer extends Component {
   getButton = () => {
     if (this.state.currentIndex < this.props.questions.length - 1) {
       return (
-        <button disabled={this.isNext()} onClick={this.nextQuestion} className={this.sytles.buttonContent}>
+        <button
+          disabled={this.isNext()}
+          onClick={this.nextQuestion}
+          className={!this.isNext() ? this.sytles.buttonContent : this.sytles.inactiveButtonContent}
+        >
           Next
         </button>
       );
@@ -77,6 +81,7 @@ class FormRenderer extends Component {
     buttonContainer: 'ke-form__form-renderer__button-container',
     rootContainer: 'ke-form__form-renderer__root-container',
     buttonContent: 'ke-form__form-renderer__button-content',
+    inactiveButtonContent: 'ke-form__form-renderer__in-active-button-content',
   };
 
   renderQuestions = question => {
@@ -104,7 +109,11 @@ class FormRenderer extends Component {
       <div className={this.sytles.rootContainer}>
         {this.renderQuestions(this.props.questions[this.state.currentIndex])}
         <div className={this.sytles.buttonContainer}>
-          <button disabled={this.isPrevious()} onClick={this.previousQuestion} className={this.sytles.buttonContent}>
+          <button
+            disabled={this.isPrevious()}
+            onClick={this.previousQuestion}
+            className={!this.isPrevious() ? this.sytles.buttonContent : this.sytles.inactiveButtonContent}
+          >
             Previous
           </button>
           {this.getButton()}
