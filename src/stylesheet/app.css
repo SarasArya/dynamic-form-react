@@ -1,0 +1,38 @@
+.ke-form__app-root__main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ke-form__form-renderer__form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ke-form__form-renderer__button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+
+.ke-form__form-renderer__root-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ke-form__form-renderer__button-content {
+  min-width: 13em;
+  min-height: 4em;
+  border-radius: 5em;
+  padding: 0.8em;
+  cursor: pointer;
+  background-color: #008cba;
+  color: #ffff;
+}
